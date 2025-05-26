@@ -4,11 +4,10 @@
 import { NextFunction, Request, Response } from 'express';
 import httpStatus from 'http-status';
 import jwt, { JwtPayload } from 'jsonwebtoken';
-import config from '../app/config';
-import AppError from '../errors/AppError';
 import { User } from '../app/modules/user/user.model';
 import { IUserRole } from '../app/modules/user/user.interface';
 import catchAsync from '../utils/catchAsync';
+import AppError from '../errors/AppError';
 
 
 const auth = (...requiredRoles: IUserRole[]) => {
