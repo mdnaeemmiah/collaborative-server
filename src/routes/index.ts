@@ -1,4 +1,6 @@
 import { Router } from 'express';
+import authRouter from '../app/modules/auth/auth.route';
+import userRouter from '../app/modules/user/user.route';
 // import authRouter from '../app/modules/auth/auth.route';
 // // import postPreferenceRouter from '../app/modules/PostPreference/postPreference.route';
 // import messageRoute from '../app/modules/message/message.route';
@@ -34,10 +36,10 @@ const moduleRoutes = [
     //   path: '/message',
     //   route: messageRoute,
     // },
-    // {
-    //   path: '/user',
-    //   route: userRouter,
-    // },
+    {
+      path: '/user',
+      route: userRouter,
+    },
     // {
     //   path: '/needMedicine',
     //   route: needMedicineRoute,
