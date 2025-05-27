@@ -1,15 +1,13 @@
 
-
-
-import { IUser } from '../user/user.interface'
 import bcrypt from 'bcrypt'
 import jwt, { JwtPayload } from 'jsonwebtoken';
-import { User } from '../user/user.model'
 import config from '../../config'
 import { TLoginUser } from './auth.interface'
 import { StatusCodes } from 'http-status-codes'
 import { createToken, verifyToken } from './auth.utils'
 import AppError from '../../../errors/AppError';
+import { IUser } from '../user/user.interface';
+import { User } from '../user/user.model';
 
 const register = async (payload: IUser) => {
   const user = new User(payload);

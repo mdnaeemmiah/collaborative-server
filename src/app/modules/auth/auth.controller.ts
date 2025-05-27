@@ -4,9 +4,9 @@ import { Request, Response } from "express";
 import { StatusCodes } from "http-status-codes";
 import { AuthService } from "./auth.service";
 import config from "../../config";
-import { User } from "../user/user.model";
 import catchAsync from "../../../utils/catchAsync";
 import sendResponse from "../../../utils/sendResponse";
+import { User } from "../user/user.model";
 
 const register = catchAsync(async(req: Request, res: Response)=>{
     const result = await AuthService.register(req.body);
