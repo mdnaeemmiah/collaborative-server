@@ -2,6 +2,7 @@ import { Router } from "express";
 import authRouter from "../app/modules/auth/auth.route";
 import userRouter from "../app/modules/user/user.route";
 import taskRouter from "../app/modules/task/task.route";
+import notificationRouter from "../app/modules/notification/notification.route";
 
 const router = Router();
 
@@ -18,14 +19,10 @@ const moduleRoutes = [
     path: "/task",
     route: taskRouter,
   },
-  // {
-  //   path: '/needMedicine',
-  //   route: needMedicineRoute,
-  // },
-  // {
-  //   path: '/help',
-  //   route: helpRoute,
-  // },
+  {
+    path: '/notification',
+    route: notificationRouter,
+  }
 ];
 
 moduleRoutes.forEach((route) => router.use(route.path, route.route));
