@@ -13,7 +13,7 @@ const register = catchAsync(async(req: Request, res: Response)=>{
     const { name, email, role,password } = req.body;
 
     // Default role is 'user', can be 'admin' if specified
-    const newUserRole = role === 'admin' ? 'admin' : 'customer'; 
+    const newUserRole = role === 'admin' ? 'admin' : 'user'; 
 
     const newUser = new User({
       name,

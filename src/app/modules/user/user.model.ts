@@ -40,8 +40,8 @@ const UserSchema = new Schema<IUser>(
     },
     role: {
       type: String,
-      enum: ['customer', 'admin'], // Only 'user' or 'admin' roles are allowed
-      default: 'customer', // Default to 'user'
+      enum: ['user', 'admin'], // Only 'user' or 'admin' roles are allowed
+      default: 'user', // Default to 'user'
     },
     phone: { type: String, default: "N/A" },
     address: { type: String, default: "N/A" },
