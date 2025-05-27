@@ -6,7 +6,7 @@ import validateRequest from '../../../middlewares/validateRequest';
 const notificationRouter = Router();
 
 notificationRouter.post(
-  '/',
+  '/create',
   validateRequest(notificationValidation.createNotificationSchema),
   notificationController.createNotification
 );

@@ -6,7 +6,7 @@ import validateRequest from '../../../middlewares/validateRequest';
 const taskRouter = Router();
 
 taskRouter.post(
-  '/',
+  '/create',
   validateRequest(taskValidation.createTaskSchema),
   taskController.createTask
 );
