@@ -18,7 +18,7 @@ app.use('/api', router);
 
 
 app.get("/", (req: Request, res: Response) => {
-  res.send("MediMart And Doctors World!");
+  res.send("Collaborative  World!");
 });
 
 
