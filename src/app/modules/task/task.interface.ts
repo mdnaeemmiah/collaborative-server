@@ -1,8 +1,10 @@
-export interface Task {
+import mongoose from "mongoose";
+
+export interface ITask {
   _id: string;
   title: string;
   description?: string;
-  assignedTo: string;  // User ID
+  assignedTo: mongoose.Types.ObjectId;  // User ID
   status: 'pending' | 'in_progress' | 'completed';
   dueDate?: Date;
   createdAt: Date;
