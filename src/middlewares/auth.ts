@@ -8,6 +8,7 @@ import { User } from '../app/modules/user/user.model';
 import { IUserRole } from '../app/modules/user/user.interface';
 import catchAsync from '../utils/catchAsync';
 import AppError from '../errors/AppError';
+import config from '../app/config';
 
 
 const auth = (...requiredRoles: IUserRole[]) => {
