@@ -11,7 +11,7 @@ const app :Application= express();
 
 // parsers
 app.use(express.json());
-app.use(cors({origin:"https://collaborative-c.vercel.app",credentials:true}));
+app.use(cors({origin:["https://collaborative-c.vercel.app", "http://localhost:3000"],credentials:true}));
 app.use(cookieParser());
 
 app.use('/api', router);
